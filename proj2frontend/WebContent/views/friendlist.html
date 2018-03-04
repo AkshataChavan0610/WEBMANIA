@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<b style="font-size:42px;">YOUR FRIENDS:</b>
+<ul ng-repeat="friend in friendslist">
+<b style="font-size:25px;">
+<li ng-hide="friend.fromusername==currentUser.username">{{friend.fromusername}}</li>
+<li ng-hide="friend.tousername==currentUser.username">{{friend.tousername}}</li>
+
+</b>
+</ul>
+<button><a href="#/chat" ng-show="currentUser.username">CHAT WITH YOUR FRIENDS</a></button>
+</body>
+</html>

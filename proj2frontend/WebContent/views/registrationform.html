@@ -1,0 +1,42 @@
+
+<center style="font-size:20px;">
+<large style="font-size:46px;"><b>SIGN-UP!!!</b></large>
+<br>
+<br>
+<span style="color:red" ng-if="error.code==1">{{error.message}}</span>
+<form><b>
+<div class="form-group">
+Enter Username :&nbsp;<input type="text"  ng-model="user.username">
+<span style="color:red" ng-if="error.code==2">{{error.message}}</span>
+</div>
+<div class="form-group">
+Enter Password:&nbsp;&nbsp;<input type="password" ng-model="user.password">
+</div>
+<div class="form-group">
+Enter Firstname :&nbsp;<input type="text" ng-model="user.firstname">
+</div>
+<div class="form-group">
+Enter Lastname :&nbsp;<input type="text" ng-model="user.lastname">
+</div>
+<div class="form-group">
+Enter Email-Id&nbsp;&nbsp;&nbsp;: &nbsp;<input type="email" ng-model="user.email">
+<span style="color:red" ng-if="error.code==3">{{error.message}}</span>
+</div>
+<div class="form-group">
+Enter Contact no.:<input type="text" ng-model="user.phonenumber">
+</div>
+<div class="form-group">
+Select Role:
+<input type="radio" value="STUDENT" ng-model="user.role">Student  
+<input type="radio" value="EMPLOYEE" ng-model="user.role"> Employee
+<input type="radio" value="ALUMNI" ng-model="user.role"> Alumni
+</div>
+&nbsp;
+<div class="form-group">
+
+<input type="submit" class="btn btn-secondary btn-lg" value="REGISTER" ng-click="registerUser()"> <!-- 1 -->
+
+</div>
+</b>
+</form>
+</center>

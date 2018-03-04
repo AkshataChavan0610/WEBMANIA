@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Friend Requests</h2>
+<div>
+<table class="table-responsive">
+<tr ng-repeat="p in pendingLists">
+<td><b>
+{{p.fromusername}} :
+</b>
+</td>
+&nbsp;&nbsp;
+<td>
+<a href=""  ng-click="updatependingrequest(p.fromusername,'A')" class="btn btn-s btn-default">Accept</a>
+</td>
+&nbsp;
+<td>
+<a href="" ng-click="updatependingrequest(p.fromusername,'D')" class="btn btn-s btn-default">Deny</a>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

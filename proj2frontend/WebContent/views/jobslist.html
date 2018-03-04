@@ -1,0 +1,29 @@
+<div>
+<h3>Job List</h3>  <button type="submit" ng-click="getJob()">Get job list</button>
+
+<table  class="table table-striped">
+		<thead>
+			<tr>
+				<td>Job Title</td>
+				<td>Job Description</td>
+				<td>Skills Required</td>
+				<td>Location</td>
+				<td>Company name</td>
+				<td>Salary</td>
+			
+				<td>Posted On:</td>
+			</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="j in jobs | orderBy: '-postedOn'">
+			
+				<td>{{j.jobTitle}}</td>
+				<td>{{j.jobDescription}}</td>
+				<td>{{j.skillsRequired}}</td>
+				<td>{{j.location}}</td>
+				<td>{{j.companyname}}</td>
+				<td>{{j.salary}}</td>
+			
+				<td>{{j.postedOn}}</td>
+			</tr>
+		</tbody>
